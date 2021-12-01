@@ -2,3 +2,6 @@ name = "machine_learning"
 uuid = "5693c5e1-72b4-4ecf-84d4-7f4dd65456ce"
 authors = ["Lîm Tsú-thuàn <dannypsnl@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+FastAI = "5d0beca9-ade8-49ae-ad0b-a3cf890e669f"
