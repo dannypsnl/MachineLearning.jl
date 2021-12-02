@@ -16,13 +16,13 @@ opt = Descent()
 data = [(x_train, y_train)]
 parameters = params(predict)
 println("before train")
-println("loss: $(loss(x_train, y_train))")
-println("parameters: $parameters")
+@show(loss(x_train, y_train))
+@show(parameters)
 for epoch in 1:200
   train!(loss, parameters, data, opt)
 end
 println("after train")
-println("loss: $(loss(x_train, y_train))")
-println("parameters: $parameters")
+@show(loss(x_train, y_train))
+@show(parameters)
 
 end # module

@@ -7,6 +7,6 @@ model = Chain(
   Dense(5, 2),
   softmax)
 
-println(model(rand(10)))
+@show(model(rand(10)))
 
 end

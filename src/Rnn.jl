@@ -27,10 +27,10 @@ data = zip(X, Y)
 ps = params(m)
 opt = ADAM(1e-3)
 
-println("loss: $(loss(seq_1, y1))")
+@show(loss(seq_1, y1))
 for epoch in 1:20
   train!(loss, ps, data, opt)
-  println("loss: $(loss(seq_1, y1))")
+  @show(loss(seq_1, y1))
 end
 
 end

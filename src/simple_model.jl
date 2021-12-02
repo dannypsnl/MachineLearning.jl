@@ -13,11 +13,11 @@ function loss(x, y)
 end
 
 x, y = rand(5), rand(2)
-println("loss: $(loss(x, y))")
+@show(loss(x, y))
 
 gs = gradient(() -> loss(x, y), params(W, b))
 W1 = gs[W]
 W .-= 0.1 .* W1
-println("loss: $(loss(x, y))")
+@show(loss(x, y))
 
 end
