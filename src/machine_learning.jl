@@ -1,7 +1,7 @@
 module machine_learning
 
 using Flux
-using Flux: train!
+using Flux: train!, @epochs
 
 actual(x) = 4x + 2
 
@@ -16,13 +16,10 @@ opt = Descent()
 data = [(x_train, y_train)]
 parameters = params(predict)
 
-function progress()
+@epochs 200 begin
+  train!(loss, parameters, data, opt)
   @show(loss(x_train, y_train))
   @show(parameters)
-end
-
-for epoch in 1:200
-  train!(loss, parameters, data, opt, cb = progress)
 end
 
 end # module
