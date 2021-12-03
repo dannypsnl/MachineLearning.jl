@@ -1,4 +1,4 @@
-module Mnist.LeNet.GPU
+module Mnist.LeNetGPU
 
 using MLDatasets
 using CUDA
