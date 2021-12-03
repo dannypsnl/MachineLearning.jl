@@ -15,14 +15,14 @@ loss(x, y) = Flux.Losses.mse(predict(x), y)
 opt = Descent()
 data = [(x_train, y_train)]
 parameters = params(predict)
-println("before train")
-@show(loss(x_train, y_train))
-@show(parameters)
-for epoch in 1:200
-  train!(loss, parameters, data, opt)
+
+function progress()
+  @show(loss(x_train, y_train))
+  @show(parameters)
 end
-println("after train")
-@show(loss(x_train, y_train))
-@show(parameters)
+
+for epoch in 1:200
+  train!(loss, parameters, data, opt, cb = progress)
+end
 
 end # module
