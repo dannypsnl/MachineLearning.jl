@@ -22,6 +22,9 @@ model = Chain(
 
 loss(x, y) = Flux.crossentropy(model(x), y)
 acc(x, y) = mean(Flux.onecold(model(x)) .== Flux.onecold(y))
+# opt = Descent()
+# opt = ADADelta()
+# opt = Momentum()
 opt = ADAM()
 
 @epochs 10 begin
