@@ -2,7 +2,7 @@ using MLDatasets
 using CUDA
 using Flux
 using Flux: Data.DataLoader
-using Flux: onehotbatch, onecold, throttle, @epochs
+using Flux: onehotbatch, onecold, @epochs
 using Statistics: mean
 
 x_train, y_train = MNIST.traindata()
