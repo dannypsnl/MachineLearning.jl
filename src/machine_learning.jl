@@ -1,5 +1,3 @@
-module machine_learning
-
 using Flux
 using Flux: train!, @epochs
 
@@ -21,5 +19,3 @@ parameters = params(predict)
   @show(loss(x_train, y_train))
   @show(parameters)
 end
-
-end # module

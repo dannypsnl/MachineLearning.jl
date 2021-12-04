@@ -1,5 +1,3 @@
-module Mnist.LeNet
-
 using MLDatasets
 using Flux
 using Flux: Data.DataLoader
@@ -35,6 +33,4 @@ opt = Descent()
   Flux.train!(loss, params(model), data, opt)
   @show(loss(x_test, y_test))
   @show(accurate(x_test, y_test))
-end
-
 end

@@ -1,5 +1,3 @@
-module Mnist.LeNetGPU
-
 using MLDatasets
 using CUDA
 using Flux
@@ -36,6 +34,4 @@ opt = ADAM()
   Flux.train!(loss, params(model), data, opt)
   @show(loss(x_test, y_test))
   @show(accurate(x_test, y_test))
-end
-
 end

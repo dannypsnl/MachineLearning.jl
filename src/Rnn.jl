@@ -1,5 +1,3 @@
-module Rnn
-
 using Flux
 using Flux: train!, reset!
 using Flux.Losses: mse
@@ -31,6 +29,4 @@ opt = ADAM(1e-3)
 for epoch in 1:20
   train!(loss, ps, data, opt)
   @show(loss(seq_1, y1))
-end
-
 end

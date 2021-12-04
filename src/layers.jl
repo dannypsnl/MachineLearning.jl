@@ -1,5 +1,3 @@
-module layers
-
 using Flux
 
 model = Chain(
@@ -8,5 +6,3 @@ model = Chain(
   softmax)
 
 @show(model(rand(10)))
-
-end

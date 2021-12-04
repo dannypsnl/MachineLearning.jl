@@ -1,5 +1,3 @@
-module simple_model
-
 using Flux
 
 W = rand(2, 5)
@@ -19,5 +17,3 @@ gs = gradient(() -> loss(x, y), params(W, b))
 W1 = gs[W]
 W .-= 0.1 .* W1
 @show(loss(x, y))
-
-end

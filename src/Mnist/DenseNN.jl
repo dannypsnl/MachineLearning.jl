@@ -1,5 +1,3 @@
-module Mnist.DenseNN
-
 using MLDatasets
 using Flux
 using Flux: Data.DataLoader
@@ -30,6 +28,4 @@ opt = ADAM()
   Flux.train!(loss, params(model), data, opt)
   @show(loss(x_test, y_test))
   @show(acc(x_test, y_test))
-end
-
 end
