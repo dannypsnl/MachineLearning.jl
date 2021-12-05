@@ -19,6 +19,13 @@ model = Chain(
   Dense(40, 10),
   softmax
 )
+model_with_batch_normalization = Chain(
+  Dense(28 * 28, 40, relu),
+  BatchNorm(40, relu),
+  Dense(40, 10),
+  BatchNorm(10),
+  softmax
+)
 
 loss(x, y) = Flux.crossentropy(model(x), y)
 acc(x, y) = mean(Flux.onecold(model(x)) .== Flux.onecold(y))
