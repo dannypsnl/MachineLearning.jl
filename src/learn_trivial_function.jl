@@ -1,5 +1,5 @@
 using Flux
-using Flux: train!, @epochs
+using Flux: train!, @epochs, params
 using Flux: Data.DataLoader
 
 actual(x) = 4x + 2
@@ -13,7 +13,7 @@ loss(x, y) = Flux.Losses.mse(model(x), y)
 
 opt = Descent()
 
-@epochs 200 begin
+@epochs 50 begin
   train!(loss, params(model), data, opt)
   @show(loss(x_test, y_test))
   @show(params(model))
