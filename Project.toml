@@ -4,5 +4,7 @@ authors = ["Lîm Tsú-thuàn <dannypsnl@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+FastAI = "5d0beca9-ade8-49ae-ad0b-a3cf890e669f"
 Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 MLDatasets = "eb30cadb-4394-5ae3-aed4-317e484a6458"
